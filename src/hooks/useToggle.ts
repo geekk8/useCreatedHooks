@@ -22,7 +22,7 @@ interface UseToggleProps {
   defaultToggle?: boolean;
 }
 
-const useToggle = ({ defaultToggle = false }: UseToggleProps) => {
+export function useToggle({ defaultToggle = false }: UseToggleProps) {
   const [toggle, setToggle] = useState(!!defaultToggle);
 
   const handleToggle = useCallback(() => {
@@ -34,6 +34,6 @@ const useToggle = ({ defaultToggle = false }: UseToggleProps) => {
     onToggle: handleToggle,
     setToggle,
   };
-};
+}
 
 export default useToggle;

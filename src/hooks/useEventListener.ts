@@ -12,12 +12,12 @@
 
 import { useEffect } from "react";
 
-export const useEventLisetener = (
+export function useEventLisetener(
   target: EventTarget | null | undefined,
   type: string,
   listener: EventListenerOrEventListenerObject,
   ...options: boolean[] | AddEventListenerOptions[]
-): void => {
+) {
   useEffect(() => {
     const targetElement: EventTarget = target ?? window;
 
@@ -29,4 +29,4 @@ export const useEventLisetener = (
       targetElement.removeEventListener(type, listener, ...options);
     };
   }, [target, type, listener, options]);
-};
+}
