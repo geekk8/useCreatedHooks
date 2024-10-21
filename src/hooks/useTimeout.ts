@@ -14,7 +14,7 @@ interface UseTimeoutProps {
   });
  */
 
-const useTimeout = ({ callback, delay }: UseTimeoutProps) => {
+export function useTimeout({ callback, delay }: UseTimeoutProps) {
   const callbackRef = useRef(callback);
 
   useEffect(() => {
@@ -30,6 +30,6 @@ const useTimeout = ({ callback, delay }: UseTimeoutProps) => {
       clearTimeout(timeoutId);
     };
   }, [delay]);
-};
+}
 
 export default useTimeout;
