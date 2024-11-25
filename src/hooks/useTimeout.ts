@@ -13,7 +13,6 @@ interface UseTimeoutProps {
     delay: 3000, // 3초 후에 콜백 실행
   });
  */
-
 export function useTimeout({ callback, delay }: UseTimeoutProps) {
   const callbackRef = useRef(callback);
 

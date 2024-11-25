@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 /**
  * @description
  * 해당되는 엘리먼트에 event listener를 관리하는 hook입니다.
@@ -9,9 +11,6 @@
     useEventLisetener(divRef.current, "click", handleClick);
  * 
  */
-
-import { useEffect } from "react";
-
 export function useEventLisetener(
   target: EventTarget | null | undefined,
   type: string,

@@ -1,3 +1,10 @@
+
+import { useCallback, useState } from "react";
+
+interface UseToggleProps {
+  defaultToggle?: boolean;
+}
+
 /**
  * toggle을 쉽게 사용할 수 있도록 하는 hook 입니다.
  * 
@@ -15,13 +22,6 @@
     토글 오프
   </button>
  */
-
-import { useCallback, useState } from "react";
-
-interface UseToggleProps {
-  defaultToggle?: boolean;
-}
-
 export function useToggle({ defaultToggle = false }: UseToggleProps) {
   const [toggle, setToggle] = useState(!!defaultToggle);
 
