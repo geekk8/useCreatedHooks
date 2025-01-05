@@ -17,7 +17,7 @@ export function useTimeout({ callback, delay }: UseTimeoutProps) {
   const callbackRef = useRef(callback);
 
   useEffect(() => {
-    if (!delay || delay !== 0) {
+    if (delay === null) {
       return;
     }
 
